@@ -8,12 +8,11 @@ import math
 
 # Init
 brick = EV3Brick()
-color = ColorSensor(Port.S2)
-ultsonic = UltrasonicSensor(Port.S3)
-l_motor = Motor(Port.B, positive_direction=Direction.CLOCKWISE)
-r_motor = Motor(Port.C, positive_direction=Direction.CLOCKWISE)
-s_motor = Motor(Port.D)
-base = DriveBase(l_motor, r_motor, 55, 175)
+color = ColorSensor(Port.S4)
+l_motor = Motor(Port.A, positive_direction=Direction.CLOCKWISE)
+r_motor = Motor(Port.D, positive_direction=Direction.CLOCKWISE)
+s_motor = Motor(Port.B)
+base = DriveBase(l_motor, r_motor, 55, 135)
 base.settings(straight_acceleration=200)
 
 def get_coeff(num):
